@@ -1,0 +1,81 @@
+# How to run me:
+
+
+
+#To clean the directory, this is optional
+
+foamCleanTutorials
+
+
+#To create the inner mesh
+
+cd airfoil
+
+blockMesh
+
+snappyHexMesh -overwrite
+
+extrudeMesh
+
+createPatch -overwrite
+
+# To shift the initial position of the wing (needed for the assigned kinematics)
+transformPoints -translate '(0 -0.5 0)'
+
+cd ..
+
+
+#To create the background mesh
+
+cd background
+
+blockMesh
+
+
+#To assemble the two meshes
+
+mergeMeshes . ../airfoil -overwrite
+
+
+#To create zones for overset treatment
+
+topoSet
+
+
+#To create zones for prescribed motion
+
+topoSet -dict system/topoSetDict_movingZone
+
+
+#Restore time folder 0
+
+rm -r 0
+
+cp -r 0.orig 0
+
+
+#And assign zoneID for overset treatment
+
+setFields
+
+checkMesh
+
+
+
+#To run in serial
+
+renumberMesh -overwrite
+
+overPimpleDyMFoam | tee log
+
+
+
+#To run in parallel (with 4 procs)
+
+decomposePar
+
+mpirun -np 4 renumberMesh -overwrite -parallel 
+
+mpirun -np 4 overPimpleDyMFoam -parallel | tee log
+
+paraFoam -builtin
