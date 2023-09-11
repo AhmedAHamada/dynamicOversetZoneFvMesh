@@ -1,0 +1,137 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  plus                                  |
+|   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      fvSolution;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+solvers
+{
+    cellDisplacement
+    {
+        solver          PCG;
+        preconditioner  DIC;
+
+        tolerance       1e-06;
+        relTol          0;
+        maxIter         100;
+    }
+
+    p
+    {
+        solver          PBiCGStab;
+        preconditioner  DILU;
+        tolerance       1e-6;
+        relTol          0.01;
+		minIter 		2;
+    }
+
+
+    pFinal
+    {
+        $p;
+        relTol          0;
+		minIter 		2;
+    }
+
+
+/*
+    pcorr
+    {
+        $pFinal;
+        solver          PCG;
+        preconditioner  DIC;
+    }
+
+    pcorrFinal
+    {
+        $pcorr;
+        relTol          0;
+    }
+*/
+
+    "(U|k|epsilon|omega)"
+    {
+
+        solver          smoothSolver;
+        smoother        symGaussSeidel;
+        tolerance       1e-8;
+        relTol          0;
+    }
+
+     /*   solver          PBiCGStab;
+        preconditioner  DILU;
+        tolerance       1e-8;
+        relTol          0.0;
+		minIter 	2;
+    }*/
+
+    "(U|k|epsilon|omega)Final"
+    {
+        $U;
+        tolerance       1e-8;
+        relTol          0;
+		minIter 		2;
+    }
+    
+    yPsi
+    {
+        solver          PBiCGStab;
+        preconditioner  DILU;
+        tolerance       1e-5;
+        relTol          0;
+    }
+}
+
+
+PIMPLE
+{
+    momentumPredictor   true;
+    correctPhi          false; 
+    oversetAdjustPhi    true;
+    nOuterCorrectors    1;
+    nCorrectors         3;
+    nNonOrthogonalCorrectors 2;
+    moveMeshOuterCorrectors true; 
+    ddtCorr             true;
+}
+
+oversetInterpolationRequired
+{
+	k;
+	omega;
+	nut; 
+	epsilon;
+}
+
+
+relaxationFactors
+{
+    fields
+    {
+        "p.*"        0.3;
+       
+    }
+    equations
+    {
+        "U.*"        0.7;
+        "epsilon.*" 	0.5;
+        "k.*" 	0.5;
+        
+       
+        
+    }
+}
+
+
+// ************************************************************************* //

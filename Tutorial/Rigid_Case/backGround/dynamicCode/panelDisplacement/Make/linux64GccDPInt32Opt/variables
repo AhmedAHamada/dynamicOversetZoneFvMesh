@@ -1,0 +1,1 @@
+LIB = $(PWD)/../platforms/$(WM_OPTIONS)/lib/libpanelDisplacement_4ce82851b83a54fd2a1bc9bacd7940b4dc2d6618
