@@ -1,0 +1,62 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  plus-overset                          |
+|   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      dynamicMeshDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dynamicFvMesh dynamicOversetZoneFvMesh;
+
+dynamicMultiMotionSolverFvMeshCoeffs
+{
+	motion2
+	{
+	motionSolverLibs
+	(
+	    "libsixDoFRigidBodyMotion.so"
+	    "libfvMotionSolvers.so"
+	);
+	motionSolver       solidBodyDisplacementLaplacian;
+	cellZone           movingZone;
+
+	solidBodyDisplacementLaplacianCoeffs
+	      {
+	   	diffusivity             uniform; 
+		solidBodyMotionFunction multiMotion;
+		multiMotionCoeffs 
+           	 { 
+                   Heave 
+                   { 
+                       solidBodyMotionFunction oscillatingLinearMotion;
+       		       oscillatingLinearMotionCoeffs
+      		 	{
+        	  	 amplitude       (0 0.5 0);
+          		 omega           2.0; 
+           	        } 
+           	   }
+                   Pitch 
+               	   { 
+                       solidBodyMotionFunction oscillatingRotatingMotionS; 
+                       oscillatingRotatingMotionSCoeffs 
+                    	{ 
+                    	  origin          (0 0 0);
+          		  amplitude       (0 0 35.231637200867816);  //units of degree
+      			  omega           2.0;       //units of rad/s
+      			  epsilon 90; 
+                    	} 
+                   } 
+            	 } 
+	      }
+        }
+}
+
+// ************************************************************************* //
