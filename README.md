@@ -34,7 +34,7 @@ Karim Ahmed, Ahmed A. Hamada, Ludovic Chatellier, Mirjam Furth, (2023) "A Modifi
 Corresponding authors, Karim Ahmed and Ahmed A. Hamada contributed equally to this work as first authors.
 
 # Contact & support
-For bug reports or support, feel free to contact Ahmed Hamada at ahamada@tamu.edu. Please note that this code is not maintained nor regularly updated, and is only tested with OpenFOAM v2212/2306. Questions related to other versions will thus not be answered.
+For bug reports or support, feel free to contact Karim Ahmed at karim.ahmed@univ-poitiers.fr or Ahmed A. Hamada at ahamada@tamu.edu. Please note that this code is not maintained nor regularly updated, and is only tested with OpenFOAM v2212/2306. Questions related to other versions will thus not be answered.
 
 # Disclaimer
 dynamicOversetZoneFvMesh is provided by the copyright holders and contributors "as-is" and any express or implied warranties, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose are disclaimed. In no event shall the copyright owner or contributors be liable for any direct, indirect, incidental, special, exemplary, or consequential damages (including, but not limited to, procurement of substitute goods or services; loss of use, data, or profits; or business interruption) however caused and on any theory of liability, whether in contract, strict liability, or tort (including negligence or otherwise) arising in any way out of the use of this software, even if advised of the possibility of such damage.
