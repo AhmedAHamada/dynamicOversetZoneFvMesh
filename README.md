@@ -22,6 +22,7 @@ dynamicOversetZoneFvMesh is published under the GNU GPL Version 3 license, which
 * Copy the Overset Source folder to the OpenFOAM $SRC directory
 * Compile all libraries and apps with
 ````
+cp -r ./overset $(SRC)
 cd $(SRC)/overset
 wmake
 ````
