@@ -12,7 +12,7 @@ The process of numerically studying the motion of some biological systems in flu
 The modification of the solver was developed by Karim Ahmed, of the University of Poitiers, France, and Ahmed A. Hamada, of the Texas A&M University, Texas, USA.
 
 # License
- is published under the GNU GPL Version 3 license, which can be found in the LICENSE file.
+dynamicOversetZoneFvMesh is published under the GNU GPL Version 3 license, which can be found in the LICENSE file.
 
 # Prerequisites
 * OpenFOAM v2212/2306. While it may compile against other versions, this has not been tested and is currently not supported.
