@@ -18,9 +18,11 @@ dynamicOversetZoneFvMesh is published under the GNU GPL Version 3 license, which
 * OpenFOAM v2212/2306. While it may compile against other versions, this has not been tested and is currently not supported.
 
 # Usage
-* Make sure that OpenFOAM v2012 is loaded into your environment
+* Make sure that OpenFOAM v2212/v2306 is loaded into your environment
+* Copy the Overset Source folder to the OpenFOAM $SRC directory
 * Compile all libraries and apps with
 ````
+cd $(SRC)/overset
 wmake
 ````
 
