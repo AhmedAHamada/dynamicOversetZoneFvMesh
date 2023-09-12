@@ -9,7 +9,7 @@ The process of numerically studying the motion of some biological systems in flu
 ![image](https://github.com/AhmedAHamada/OFJ_Modified_Overset/assets/91083913/f051d0c9-8a74-447c-9c90-49a5787f9ca3)
 
 # Authors
-The main structure of the solver and its modification were developed by Karim Ahmed, of the University of Poitiers, France, and Ahmed A. Hamada, of the Texas A&M University, Texas, USA.
+The modification of the solver was developed by Karim Ahmed, of the University of Poitiers, France, and Ahmed A. Hamada, of the Texas A&M University, Texas, USA.
 
 # License
  is published under the GNU GPL Version 3 license, which can be found in the LICENSE file.
