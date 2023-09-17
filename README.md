@@ -15,10 +15,10 @@ The modification of the solver was developed by Karim Ahmed, of the University o
 dynamicOversetZoneFvMesh is published under the GNU GPL Version 3 license, which can be found in the LICENSE file.
 
 # Prerequisites
-* OpenFOAM v2212/2306. While it may compile against other versions, this has not been tested and is currently not supported.
+* OpenFOAM v2006/v2212/2306. While it may compile against other versions, this has not been tested and is currently not supported.
 
 # Usage
-* Make sure that OpenFOAM v2212/v2306 is loaded into your environment
+* Make sure that OpenFOAM v2006/v2212/v2306 is loaded into your environment
 * Copy the dynamicMesh/motionSolvers and dynamicMesh/Make folders to the OpenFOAM $SRC directory
 * Copy the Overset Source folder to the OpenFOAM $SRC directory
 * Compile all libraries and apps
