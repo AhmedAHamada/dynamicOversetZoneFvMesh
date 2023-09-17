@@ -19,10 +19,16 @@ dynamicOversetZoneFvMesh is published under the GNU GPL Version 3 license, which
 
 # Usage
 * Make sure that OpenFOAM v2212/v2306 is loaded into your environment
+* Copy the dynamicMesh/motionSolvers and dynamicMesh/Make folders to the OpenFOAM $SRC directory
 * Copy the Overset Source folder to the OpenFOAM $SRC directory
-* Compile all libraries and apps with
+* Compile all libraries and apps
+* Follow these commands:
 ````
+cp -r dynamicMesh/motionSolvers $(SRC)/dynamicMesh/
+cp -r dynamicMesh/Make $(SRC)/dynamicMesh/
 cp -r ./overset $(SRC)
+cd $(SRC)/dynamicMesh
+wmake
 cd $(SRC)/overset
 wmake
 ````
