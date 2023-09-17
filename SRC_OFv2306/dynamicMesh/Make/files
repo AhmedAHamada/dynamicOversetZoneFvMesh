@@ -121,7 +121,7 @@ $(solidBodyMotionFunctions)/axisRotationMotion/axisRotationMotion.C
 $(solidBodyMotionFunctions)/multiMotion/multiMotion.C
 $(solidBodyMotionFunctions)/oscillatingLinearMotion/oscillatingLinearMotion.C
 $(solidBodyMotionFunctions)/oscillatingRotatingMotion/oscillatingRotatingMotion.C
-$(solidBodyMotionFunctions)/oscillatingRotatingMotion/oscillatingRotatingMotionS.C
+$(solidBodyMotionFunctions)/oscillatingRotatingMotionS/oscillatingRotatingMotionS.C
 
 motionSolvers/displacement/solidBody/pointPatchFields/derived/solidBodyMotionDisplacement/solidBodyMotionDisplacementPointPatchVectorField.C
 
