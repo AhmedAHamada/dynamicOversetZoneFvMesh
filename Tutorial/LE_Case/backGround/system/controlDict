@@ -58,94 +58,6 @@ maxDeltaT       0.01;
 
 functions
 {
-
-///////////////////////////////////////////////////////////////////////////
-    /*inMassFlow
-    {
-        type            surfaceFieldValue;
-
-        libs ("libfieldFunctionObjects.so");
-        enabled         true;
-
-	writeControl   timeStep;
-	writeInterval  1;
-
-        log             true;
-
-        writeFields     false;
-
-        regionType          patch;
-        name      inlet;
-
-	operation       sum;
-        fields
-        (
-            phi
-        );
-    }*/
-///////////////////////////////////////////////////////////////////////////
-
-///////////////////////////////////////////////////////////////////////////
-    /*outMassFlow
-    {
-        type            surfaceFieldValue;
-
-        libs ("libfieldFunctionObjects.so");
-        enabled         true;
-
-	writeControl   timeStep;
-	writeInterval  1;
-
-        log             yes;
-
-        writeFields     false;
-
-        regionType          patch;
-        name      outlet;
-
-	operation       sum;
-        fields
-        (
-            phi
-        );
-    }*/
-///////////////////////////////////////////////////////////////////////////
-
-///////////////////////////////////////////////////////////////////////////
-
-    /*fieldAverage
-    {
-        type            fieldAverage;
-        libs ("libfieldFunctionObjects.so");
-        enabled        false;
-        writeControl   outputTime;
-
-	//writeControl   timeStep;
-	//writeInterval  100;
-
-	//cleanRestart true;
-
-	//timeStart       20;
-	//timeEnd         200;
-
-        fields
-        (
-            U
-            {
-                mean        on;
-                prime2Mean  on;
-                base        time;
-            }
-
-            p
-            {
-                mean        on;
-                prime2Mean  on;
-                base        time;
-            }
-        );
-    }*/
-
 ///////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////////////////////////////////
@@ -199,16 +111,15 @@ functions
 	rho rhoInf;
 	rhoInf 1.225;
 
-	//// Dump to file
 	log true;
 
 	CofR (0.0 0 0);
-	liftDir (-0.173648 0.984807 0);
-	dragDir (0.984807 0.173648 0);
+	liftDir (0 1 0);
+	dragDir (1 0 0);
 	pitchAxis (0 0 1);
-	magUInf 14.6;
-	lRef 1.0;         // reference lenght for moments!!!
-	Aref 1.0;	//2.0;         // reference area 1 for 2d
+	magUInf 2.122065907891938;
+	lRef 1.0;
+	Aref 1.0;
 
         writeControl   timeStep;
         writeInterval  10;
@@ -217,40 +128,5 @@ functions
 ///////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////////////////////////////////
-
-    /*minmaxdomain
-    {
-	type fieldMinMax;
-	//type banana;
-
-	libs ("libfieldFunctionObjects.so");
-
-	enabled true;
-
-	mode component;
-
-	writeControl timeStep;
-	writeInterval 1;
-
-	log true;
-
-	fields (p U k epsilon omega nut);
-    }*/
-
-///////////////////////////////////////////////////////////////////////////
-
-///////////////////////////////////////////////////////////////////////////
-/*    yplus
-    {
-    	type yPlus;
-    	functionObjectLibs ("libutilityFunctionObjects.so");
-    	enabled true;
-        writeControl outputTime;
-
-	//writeControl timeStep;
-	//writeInterval 1;
-    }*/
-///////////////////////////////////////////////////////////////////////////
-
 };
 
