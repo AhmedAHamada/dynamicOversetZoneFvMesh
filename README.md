@@ -5,7 +5,7 @@ The process of numerically studying the motion of some biological systems in flu
 
 ![image](https://github.com/AhmedAHamada/OFJ_Modified_Overset/assets/91083913/cbccc266-9eac-483b-a335-4a4ae7f7d8f3)
 
-![image](https://github.com/AhmedAHamada/OFJ_Modified_Overset/assets/91083913/8ecb044d-c49d-40bf-ad55-b8a52ed3a775)
+![image](https://github.com/AhmedAHamada/OFJ_Modified_Overset/assets/91083913/c8f1c59a-e2fa-412e-9779-f031c0dba34f)
 
 ![T000M](https://github.com/AhmedAHamada/dynamicOversetZoneFvMesh/assets/91083913/f18f58d1-aaa0-46f6-a480-d5182b92b039)
 
