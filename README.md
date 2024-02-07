@@ -15,6 +15,8 @@ The process of numerically studying the motion of some biological systems in flu
 
 <img width="2316" alt="Heave_U" src="https://github.com/AhmedAHamada/dynamicOversetZoneFvMesh/assets/91083913/f9ffaad7-b55b-4b8e-ad2d-240a759dda30">
 
+![Cp](https://github.com/AhmedAHamada/dynamicOversetZoneFvMesh/assets/91083913/2ac7ec52-77b6-4e85-a5c5-6391ff04c667)
+
 # Authors
 The modification of the solver was developed by Karim Ahmed, of the University of Poitiers, France, and Ahmed A. Hamada, of the Texas A&M University, Texas, USA, who contributed equally to this work as first authors.
 
