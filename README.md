@@ -16,7 +16,7 @@ The process of numerically studying the motion of some biological systems in flu
 <img width="2316" alt="Heave_U" src="https://github.com/AhmedAHamada/dynamicOversetZoneFvMesh/assets/91083913/f9ffaad7-b55b-4b8e-ad2d-240a759dda30">
 
 # Authors
-The modification of the solver was developed by Karim Ahmed, of the University of Poitiers, France, and Ahmed A. Hamada, of the Texas A&M University, Texas, USA.
+The modification of the solver was developed by Karim Ahmed, of the University of Poitiers, France, and Ahmed A. Hamada, of the Texas A&M University, Texas, USA, who contributed equally to this work as first authors.
 
 # License
 dynamicOversetZoneFvMesh is published under the GNU GPL Version 3 license, which can be found in the LICENSE file.
@@ -46,7 +46,7 @@ wmake
 * The user is encouraged to add their deformation code in backGround/system/codeDict file.
 
 # Paper Citation
-Karim Ahmed, Ahmed A. Hamada, Ludovic Chatellier, Mirjam Furth, (2023 under review) "A Modified Overset Method in \OF]{A Modified Overset Method in OpenFOAM for Simultaneous Motion and Deformation: A Case Study of a Flexible Flapping Foil", The OpenFOAM Journal.
+Karim Ahmed, Ahmed A. Hamada, Ludovic Chatellier, Mirjam Furth, (2024 under review) "A Modified Overset Method in OpenFOAM for Simultaneous Motion and Deformation: A Case Study of a Flexible Flapping Foil", The OpenFOAM Journal.
 Corresponding authors, Karim Ahmed and Ahmed A. Hamada contributed equally to this work as first authors.
 
 # Contact & support
