@@ -9,6 +9,8 @@ The process of numerically studying the motion of some biological systems in flu
 
 ![T000M](https://github.com/AhmedAHamada/dynamicOversetZoneFvMesh/assets/91083913/f18f58d1-aaa0-46f6-a480-d5182b92b039)
 
+![Parallel](https://github.com/AhmedAHamada/dynamicOversetZoneFvMesh/assets/91083913/915c7ca4-475b-4c26-b1f7-72f0cefce321)
+
 ![T000F](https://github.com/AhmedAHamada/dynamicOversetZoneFvMesh/assets/91083913/221b435d-eccf-4c32-8fb0-afd49fe03081)
 
 <img width="2316" alt="Heave_U" src="https://github.com/AhmedAHamada/dynamicOversetZoneFvMesh/assets/91083913/f9ffaad7-b55b-4b8e-ad2d-240a759dda30">
