@@ -48,7 +48,7 @@ wmake
 * The user is encouraged to add their deformation code in backGround/system/codeDict file.
 
 # Paper Citation
-Karim Ahmed, Ahmed A. Hamada, Ludovic Chatellier, Mirjam Furth, (2024, Accepted) "A Modified Overset Method in OpenFOAM for Simultaneous Motion and Deformation: A Case Study of a Flexible Flapping Foil", The OpenFOAM Journal.
+Ahmed, K., Hamada, A. A. ., Chatellier, L., & Furth, M. . (2024). A Modified Overset Method in OpenFOAM for Simultaneous Motion and Deformation: A Case Study of a Flexible Flapping Foil. OpenFOAM® Journal, 4, 41–61. https://doi.org/10.51560/ofj.v4.96
 Corresponding authors, Karim Ahmed and Ahmed A. Hamada contributed equally to this work as first authors.
 
 # Contact & support
